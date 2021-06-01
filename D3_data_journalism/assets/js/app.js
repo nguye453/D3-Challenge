@@ -5,7 +5,7 @@ var svgHeight = 600;
 var margin = {
   top: 50,
   right: 50,
-  bottom: 50,
+  bottom: 0,
   left: 50
 };
 
@@ -15,8 +15,7 @@ var width = svgWidth - margin.left - margin.right;
 // append svg and group
 var svg = d3.select("#scatter")
   .append("svg")
-  .attr("width", svgWidth)
-  .attr("height", svgHeight);
+  .attr("viewBox", `0 0 700 700`)
 
 var chartGroup = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
